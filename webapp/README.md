@@ -45,13 +45,17 @@ pnpm install
 
 Configuration
 
-Update your Keycloak and app settings in the appropriate config file or page (for example):
+Create a `.env.local` file in the project root and define the following variables:
 
-```ts
-const KEYCLOAK_BASE_URL = "https://amruthaauth.cookerp.com";
-const REALM = "Amrutha";
-const CLIENT_ID = "webapp";
-const APP_BASE_URL = "http://localhost:3000";
+```text
+NEXT_PUBLIC_KEYCLOAK_BASE_URL=<Keycloak base URL>
+NEXT_PUBLIC_KEYCLOAK_REALM=<Keycloak realm name>
+NEXT_PUBLIC_KEYCLOAK_CLIENT_ID=<Keycloak client ID>
+NEXT_PUBLIC_KEYCLOAK_CLIENT_SECRET=<Keycloak client secret>
+NEXT_PUBLIC_APP_BASE_URL=<App base URL, e.g. http://localhost:3000>
+NEXT_PUBLIC_ADK_API_ENDPOINT=<Agents backend API URL>
+NEXT_PUBLIC_ADK_SESSION_ENDPOINT=<Agents session endpoint URL>
+NEXT_PUBLIC_ADK_APP_NAME=<Display name for this app>
 ```
 
 Ensure the same redirect_uri is configured in Keycloak for your client.
