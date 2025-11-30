@@ -104,8 +104,12 @@ export function MyRuntimeProvider({
       {
         try {
           // 💡 Call your specific API endpoint for creating a session
+          const storedToken = localStorage.getItem("access_token");
+          let headers: any = { "Authorization": "Bearer "+storedToken };
+
           const response = await fetch(config.adkSessionEndpoint, {
             method: "POST",
+            headers
           });
           
           const data = await response.json();
