@@ -139,24 +139,24 @@ const ThreadSuggestions: FC = () => {
     <div className="aui-thread-welcome-suggestions grid w-full gap-2 pb-4 @md:grid-cols-2">
       {[
         {
-          title: "Create an ingredient list",
-          label: "For making 50 kg of Keerai Masiyal",
-          action: "Create an ingredient list for making 50 kg of Keerai Masiyal?",
+          title: "Generate a one-week vegetarian meal plan",
+          label: "for a family of four with balanced macros",
+          action: "Generate a one-week vegetarian meal plan for a family of four with balanced macros.",
         },
         {
-          title: "Explain React hooks",
-          label: "like useState and useEffect",
-          action: "Explain React hooks like useState and useEffect",
-        },
-        {
-          title: "Write a SQL query",
-          label: "to find top customers",
-          action: "Write a SQL query to find top customers",
-        },
-        {
-          title: "Create a meal plan",
+          title: "Suggest a high-protein, 1,800-calorie meal plan",
           label: "for healthy weight loss",
-          action: "Create a meal plan for healthy weight loss",
+          action: "Suggest a high-protein, 1,800-calorie meal plan for healthy weight loss.",
+        },
+        {
+          title: "Create a shopping list and prep plan",
+          label: "for hosting a dinner for 25 guests",
+          action: "Create a shopping list and prep plan for hosting a dinner for 25 guests.",
+        },
+        {
+          title: "Suggest quick 15-minute meal ideas using",
+          label: "the ingredients available in my pantry",
+          action: "Suggest quick 15-minute meal ideas using the ingredients available in my pantry.",
         },
       ].map((suggestedAction, index) => (
         <m.div

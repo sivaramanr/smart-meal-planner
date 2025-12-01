@@ -20,24 +20,43 @@ This project is a capstone demonstration of an AI-powered agent application buil
 - Google Cloud Project with Vertex AI enabled
 - Google Cloud credentials configured
 
-### Setup
+### Setup (Backend)
 
 1. Clone the repository
-2. Configure environment variables or use `local.env`.
+
+2. Navigate to the backend folder:
+```bash
+cd backend
+```
+
+3. Configure environment variables or use `local.env`.
 - GOOGLE_CLOUD_PROJECT
 - GOOGLE_CLOUD_LOCATION
 - GOOGLE_API_KEY
 - GOOGLE_APPLICATION_CREDENTIALS
 - GOOGLE_CLOUD_AGENT_ENGINE_ENABLE_TELEMETRY
 
-3. Build the project using Maven:
+4. Configure application database and agent settings in application.yml (or corresponding profile):
+- Set datasource properties:
 
+    - spring.datasource.url=<MYSQL_DB_URL>
+    - spring.datasource.username=<USERNAME>
+    - spring.datasource.password=<PASSWORD>
+
+- If you use VertexAiSessionService, also set: (Skip this if using InMemorySessionService.)
+    - google.adk.reasoning-engine-name=<VERTEX_AI_REASONING_ENGINE_NAME>
+
+5. Build the project using Maven:
+
+```bash
 mvn clean install
+```
 
-4. Run the Spring Boot application:
+6. Run the Spring Boot application:
 
+```bash
 mvn spring-boot:run
-
+```
 
 ## Custom Tools Overview
 
@@ -79,3 +98,6 @@ Logs include key identifiers like User ID and Session ID throughout the request 
 
 This project showcases the integration of Google ADK with Spring Boot for building intelligent, stateful AI agents leveraged by cutting-edge language models like Gemini in Google Vertex AI.
 
+## Frontend (Web App)
+
+For details about the Smart Meal Planner web application, see the [Web App README](webapp/README.md).
